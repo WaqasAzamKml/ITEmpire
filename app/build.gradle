@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.example.mirsaab.itempire2"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+
+    /*
+        Adding iconics Library
+     */
+    compile fileTree(dir: 'libs', include: ['iconics'])
+    compile "com.mikepenz:iconics-core:2.6.5@aar"
+
+    /*
+        Adding iconics Fonts categories
+     */
+    compile 'com.mikepenz:google-material-typeface:2.2.0.1.original@aar'
+    compile 'com.mikepenz:material-design-iconic-typeface:2.2.0.1@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.6.0.1@aar'
+    compile 'com.mikepenz:octicons-typeface:3.2.0.1@aar'
+    compile 'com.mikepenz:meteocons-typeface:1.1.0.1@aar'
+    compile 'com.mikepenz:community-material-typeface:1.5.54.1@aar'
+    compile 'com.mikepenz:weather-icons-typeface:2.0.10.1@aar'
+    compile 'com.mikepenz:typeicons-typeface:2.0.7.1@aar'
+    compile 'com.mikepenz:entypo-typeface:1.0.0.1@aar'
+    compile 'com.mikepenz:devicon-typeface:2.0.0.1@aar'
+    compile 'com.mikepenz:foundation-icons-typeface:3.0.0.1@aar'
+    compile 'com.mikepenz:ionicons-typeface:2.0.1.1@aar'
+}
